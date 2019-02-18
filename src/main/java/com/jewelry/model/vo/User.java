@@ -11,6 +11,11 @@ public class User implements Serializable {
     private String password;
     private int age;
 
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
