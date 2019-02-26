@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by admin on 2018/7/20.
  */
-public class User implements Serializable {
+public class User implements Serializable,Comparable{
     private String name;
     private String dengluming;
     private String password;
@@ -36,6 +36,22 @@ public class User implements Serializable {
         result = 31 * result + getPassword().hashCode();
         result = 31 * result + getAge();
         return result;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        User u=(User)o;
+        return Integer.compare(((User) o).getAge(),this.age);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", dengluming='" + dengluming + '\'' +
+                ", password='" + password + '\'' +
+                ", age=" + age +
+                '}';
     }
 
     public String getName() {
