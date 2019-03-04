@@ -10,12 +10,17 @@ public class User implements Serializable,Comparable{
     private String dengluming;
     private String password;
     private int age;
+    private String sex;
 
+    public User(String name, int age,String sex) {
+        this.name = name;
+        this.age = age;
+        this.sex=sex;
+    }
     public User(String name, int age) {
         this.name = name;
         this.age = age;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -84,5 +89,13 @@ public class User implements Serializable,Comparable{
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }
