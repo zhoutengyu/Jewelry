@@ -48,9 +48,9 @@ public class TestStream {
         //System.out.println(optional.orElse("b"));
         //System.out.println(optional.orElseGet(()->"c"));
         users.stream().collect(Collectors.toCollection(TreeSet::new));
-       Map<Boolean,List<User>> map= users.stream().collect(partitioningBy(x->x.getAge()>22));
+        Map<Boolean,List<User>> map= users.stream().collect(partitioningBy(x->x.getAge()>22));
        // map.get(false).forEach(x-> System.out.println(x.getAge()));
-       Map<String,List<User>> map1= users.stream().collect(groupingBy(x->x.getSex()));
+        Map<String,List<User>> map1= users.stream().collect(groupingBy(x->x.getSex()));
         Map<String,List<String>> names=users.stream().collect(Collectors.groupingBy(x->x.getSex(),mapping(y->y.getName(),toList())));
         users.stream().collect(Collectors.groupingBy(User::getSex,mapping(User::getName,toList())));
 
@@ -72,9 +72,8 @@ public class TestStream {
        users.stream().filter(u->u.getAge()>22).peek(x-> System.out.println(x.getAge())).map(x->x.getName()).collect(toList());
 
         int g=1;
-
-
-
+        System.out.println(new BigDecimal(4.949).divide(new BigDecimal(100),4,BigDecimal.ROUND_UP));
+      
 
     }
 }
