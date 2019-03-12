@@ -73,7 +73,8 @@ public class TestStream {
 
         int g=1;
         System.out.println(new BigDecimal(4.949).divide(new BigDecimal(100),4,BigDecimal.ROUND_UP));
-      
+        System.out.println(users.toString());
+
 
     }
 }
