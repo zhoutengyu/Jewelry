@@ -1,4 +1,4 @@
-package com.jewelry.springdemo;
+package com.jewelry.springdemo.day0312;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

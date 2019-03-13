@@ -1,4 +1,4 @@
-package com.jewelry.springdemo;
+package com.jewelry.springdemo.day0312;
 
 public class FunctionService {
     public void sayHello(String word){
