@@ -2,6 +2,7 @@ package com.jewelry;
 
 import com.jewelry.springdemo.config.CDPlayerConfig;
 import com.jewelry.springdemo.day0313.CompactDisc;
+import com.jewelry.springdemo.day0313.MediaPlayer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,16 @@ public class JewelryApplicationTests {
 	@Autowired
 	private CompactDisc compactDisc;
 
+	@Autowired
+	private MediaPlayer mediaPlayer;
+
 	@Test
 	public void contextLoads() {
 		compactDisc.play();
-
+	}
+	@Test
+	public void testAutowired() {
+		mediaPlayer.play();
 	}
 
 }

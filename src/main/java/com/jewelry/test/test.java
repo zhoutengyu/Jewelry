@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import com.jewelry.model.vo.User;
 import org.springframework.util.Assert;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -32,7 +33,7 @@ public class test {
             System.out.println(u.getName()+"\t"+u.getAge());
         }*/
 
-        User u1=new User("20190118", 25);
+     /*   User u1=new User("20190118", 25);
         User u2=   new User("20180217", 22);
         User u3=   new User("20190215", 20);
         List<User> users=new ArrayList<>();
@@ -42,6 +43,9 @@ public class test {
         users.add(u3);
         users.removeIf(x->x.getAge()>24);
         //users.forEach(x-> System.out.println(x.getAge()));
-        users.forEach(System.out::println);
+        users.forEach(System.out::println);*/
+        BigDecimal a=new BigDecimal(1230.00);
+        BigDecimal b=new BigDecimal(0.7);
+        System.out.println(a.multiply(b).setScale(2,BigDecimal.ROUND_UP));
     }
 }
