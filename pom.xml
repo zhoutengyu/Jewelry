@@ -121,6 +121,11 @@
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>1.2.4</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.yeecode.objectLogger</groupId>
+			<artifactId>ObjectLoggerClient</artifactId>
+			<version>1.0.4</version>
+		</dependency>
 	</dependencies>
 
 	<build>
