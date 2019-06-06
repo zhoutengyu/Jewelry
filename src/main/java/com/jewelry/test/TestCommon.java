@@ -2,6 +2,7 @@ package com.jewelry.test;
 
 import com.jewelry.model.vo.User;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class TestCommon {
@@ -29,14 +30,14 @@ public class TestCommon {
         Integer d=new Integer(100);
         System.out.println(c==d);
         System.out.println(c.equals(d));*/
-       Integer a=-2;
+      /* Integer a=-2;
        Long b=-2l;
         Integer m=-2;
         Long n=-2l;
         System.out.println(a.equals(b));
         System.out.println(m.equals(n));
         Map<String,User> map=new HashMap();
-        User user=new User("Jack",20);
+        User user=new User("Jack",20,new Date());
         map.put("j",user);
         map.forEach((k,v)->{
             System.out.println(v.getAge());
@@ -44,7 +45,9 @@ public class TestCommon {
         user.setAge(30);
         map.forEach((k,v)->{
             System.out.println(v.getAge());
-        });
+        });*/
+
+        ConsumerServer.repeat(10,i-> System.out.println("count:"+(10-i)));
     }
 
 }

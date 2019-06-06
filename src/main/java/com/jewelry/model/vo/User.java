@@ -1,6 +1,10 @@
 package com.jewelry.model.vo;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by admin on 2018/7/20.
@@ -11,11 +15,19 @@ public class User implements Serializable,Comparable{
     private String password;
     private int age;
     private String sex;
+    @JSONField( format = "yyyy-MM-dd HH:mm:ss")
+    private Date date;
 
     public User(String name, int age,String sex) {
         this.name = name;
         this.age = age;
         this.sex=sex;
+
+    }
+    public User(String name, int age,Date date) {
+        this.name = name;
+        this.age = age;
+        this.date=date;
     }
     public User(String name, int age) {
         this.name = name;
@@ -97,5 +109,13 @@ public class User implements Serializable,Comparable{
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
