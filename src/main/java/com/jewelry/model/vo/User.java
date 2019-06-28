@@ -17,7 +17,7 @@ public class User implements Serializable,Comparable{
     private String sex;
     @JSONField( format = "yyyy-MM-dd HH:mm:ss")
     private Date date;
-
+    public User() { }
     public User(String name, int age,String sex) {
         this.name = name;
         this.age = age;
